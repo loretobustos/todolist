@@ -1,6 +1,6 @@
 <template>
 <div>
-    <h1>Lista de Componentes</h1>
+    <h1>Lista de Tareas</h1>
 
     <form>
         <label for="">Tareas</label>
@@ -9,10 +9,13 @@
     </form>
     <ul>
         <li v-for="tarea in lista_tareas" :key="tarea">
-
             {{ tarea}}
         </li>
+        <button @click.prevent="eliminar_tarea">Eliminar</button>
     </ul>
+
+
+
 </div>
 </template>
 
@@ -27,14 +30,28 @@ export default {
             lista_tareas: [],
         }
     },
+    name: 'Lista_de_tareas',
+    // props: {},
+    data: function(){
+        return {
+            mensaje:'hola mundo',
+            tarea: '',
+            eliminar_tarea: [],
+        }
+    },
     // computed: {},
     methods: {
         // -- Metodos
         agregar_tarea (){
             alert(this.tarea)
             this.lista_tareas.push(this.tarea)
+        },
+        eliminar_tarea (){
+            alert(this.tarea)
+              this.eliminar_tarea.pop(this.tarea)
         }
-    },
+    }
+
     // components: {},
 }
 </script>

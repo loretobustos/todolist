@@ -6,7 +6,6 @@
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
 import ListaDeTareas from './components/ListaDeTareas.vue'
 
 export default {
